@@ -1,0 +1,14 @@
+{
+  "global": {
+    "parseVersion": "1.4.2"
+  },
+  "applications": {
+    "_default": {
+      "link": "odtion"
+    },
+    "odtion": {
+      "applicationId": "2pJVH4rR0KsPTbZqzWDGgwT63V7lAEDhiTx5ivwl",
+      "masterKey": "8OHX36cU0fz99082iFzdAqcKI7BaVHvOS71s67Fa"
+    }
+  }
+}
