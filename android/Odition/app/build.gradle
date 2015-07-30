@@ -1,0 +1,47 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 21
+    buildToolsVersion "22.0.1"
+
+    packagingOptions {
+        exclude 'META-INF/services/javax.annotation.processing.Processor'
+    }
+
+    signingConfigs {
+        release {
+            storeFile file("certs/odition.jks")
+            storePassword "Ca\$taway5"
+            keyAlias "prod"
+            keyPassword "Ca\$taway5"
+        }
+    }
+
+    defaultConfig {
+        applicationId "com.odition.odition"
+        minSdkVersion 15
+        targetSdkVersion 21
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        debug {
+            signingConfig signingConfigs.release
+        }
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+    }
+}
+
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile project(':ParseLoginUI')
+    compile 'com.android.support:appcompat-v7:22.2.0'
+    compile 'com.jakewharton:butterknife:7.0.1'
+    compile 'com.parse.bolts:bolts-android:1.2.1'
+
+}
