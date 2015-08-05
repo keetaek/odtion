@@ -78,6 +78,10 @@ public class MainActivity extends AppCompatActivity
         } else {
             ParseUser user = ParseUser.getCurrentUser();
             String email = user.getEmail();
+
+            if (email == null) {
+                email = "";
+            }
             GravatarUrl gravatarUrl = new GravatarUrl(email);
 
             ImageView imageView = (ImageView) navigationView.findViewById(R.id.img_avatar);
