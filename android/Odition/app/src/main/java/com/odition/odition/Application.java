@@ -1,6 +1,7 @@
 package com.odition.odition;
 
 import com.facebook.FacebookSdk;
+import com.odition.odition.model.Audition;
 import com.odition.odition.model.Profile;
 import com.parse.Parse;
 import com.parse.ParseFacebookUtils;
@@ -15,6 +16,7 @@ public class Application extends android.app.Application {
         super.onCreate();
         FacebookSdk.sdkInitialize(getApplicationContext());
 
+        ParseObject.registerSubclass(Audition.class);
         Parse.initialize(this, getString(R.string.parse_app_id),
                 getString(R.string.parse_client_key));
 

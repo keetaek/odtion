@@ -23,8 +23,6 @@ public class HomeFragment extends Fragment {
     @Bind(R.id.txt_greetings)
     TextView greetingsTextView;
 
-    private OnLogoutListener mListener;
-
     public static HomeFragment newInstance() {
         return new HomeFragment();
     }
@@ -42,16 +40,6 @@ public class HomeFragment extends Fragment {
         return view;
     }
 
-    @Override
-    public void onAttach(Activity  activity) {
-        super.onAttach(activity);
-        try {
-            mListener = (OnLogoutListener) activity;
-        } catch (ClassCastException e) {
-            throw new ClassCastException(activity.toString()
-                    + " must implement OnLogoutListener");
-        }
-    }
 
     @Override
     public void onResume() {
@@ -62,26 +50,6 @@ public class HomeFragment extends Fragment {
         } else {
             greetingsTextView.setText("Hello, stranger");
         }
-    }
-
-    @Override
-    public void onDetach() {
-        super.onDetach();
-        mListener = null;
-    }
-
-    @OnClick(R.id.btn_logout)
-    public void onLogout(Button button) {
-        ParseUser.logOutInBackground(new LogOutCallback() {
-            @Override
-            public void done(ParseException e) {
-                mListener.onLogout();
-            }
-        });
-    }
-
-    public interface OnLogoutListener {
-        void onLogout();
     }
 
 

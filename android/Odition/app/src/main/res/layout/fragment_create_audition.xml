@@ -1,0 +1,90 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.odition.odition.fragments.CreateAuditionFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/create_an_audition" />
+
+        <EditText
+            android:id="@+id/edt_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/audition_title" />
+
+        <EditText
+            android:id="@+id/edt_summary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/audition_summary" />
+
+        <EditText
+            android:id="@+id/edt_instructions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/audition_instructions" />
+
+        <EditText
+            android:id="@+id/edt_application_deadline"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/audition_application_deadline"
+            android:inputType="date" />
+
+        <EditText
+            android:id="@+id/edt_project_start_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/audition_project_start_date"
+            android:inputType="date" />
+
+        <EditText
+            android:id="@+id/edt_project_end_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/audition_project_end_date"
+            android:inputType="date" />
+
+        <EditText
+            android:id="@+id/edt_status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/audition_status" />
+
+        <EditText
+            android:id="@+id/edt_location"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/audition_location" />
+
+        <EditText
+            android:id="@+id/edt_payment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/audition_payment" />
+
+        <EditText
+            android:id="@+id/edt_logo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/audition_logo" />
+
+        <Button
+            android:id="@+id/btn_create_audition"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/audition_submit" />
+
+    </LinearLayout>
+
+</ScrollView>
+

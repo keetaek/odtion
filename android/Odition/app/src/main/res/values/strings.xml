@@ -19,4 +19,18 @@
     <string name="dont_have_account_prompt">Don\'t have an account yet?</string>
     <string name="facebook">Facebook</string>
     <string name="twitter">Twitter</string>
+    <string name="audition_title">Title</string>
+    <string name="audition_summary">Summary</string>
+    <string name="audition_instructions">Instructions</string>
+    <string name="audition_project_start_date">Project Start Date</string>
+    <string name="audition_project_end_date">Project End Date</string>
+    <string name="audition_status">Status</string>
+    <string name="audition_location">Location</string>
+    <string name="audition_payment">Payment</string>
+    <string name="audition_logo">Logo</string>
+    <string name="audition_application_deadline">Application Deadline</string>
+    <string name="create_an_audition">Create an Audition</string>
+    <string name="drawer_open">open</string>
+    <string name="drawer_close">close</string>
+    <string name="audition_submit">Submit</string>
 </resources>
